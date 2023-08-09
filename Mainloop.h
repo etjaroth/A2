@@ -20,6 +20,9 @@ public:
     Mainloop(Pipeline &pipeline);
     ~Mainloop();
 
+    Mainloop(const Mainloop&) = delete;
+    Mainloop& operator=(const Mainloop&) = delete;
+
     void run();
 };
 

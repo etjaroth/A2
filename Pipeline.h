@@ -17,6 +17,9 @@ public:
     Pipeline(std::string pipeline_name);
     ~Pipeline();
 
+    Pipeline(const Pipeline&) = delete;
+    Pipeline& operator=(const Pipeline&) = delete;
+
     // Creates an elemnt and returns it. If elememt creation is successful, adds it to the pipeline.
     GstElement *add(std::string element, std::string name = "");
     bool link();
